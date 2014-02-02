@@ -30,10 +30,10 @@ void loop()
              strip.setPixelColor(i, getandValue  % 384));
           */
           strip.setPixelColor(i, Wheel( (i + j)  % 384));
-        }  
+        }     
+       strip.show();
+       delay(wait);
     }
-    strip.show();
-    delay(wait);
 }
 
 /*
