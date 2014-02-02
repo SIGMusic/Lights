@@ -4,6 +4,7 @@
 int nLEDs = 32;
 int dataPin = 2;
 int clockPin = 3;
+uint8_t wait = 10; 
 
 LPD8806 strip = LPD8806(nLEDs, dataPin, clockPin);
 
@@ -15,6 +16,7 @@ void setup()
 
 void loop()
 {
+  uint8_t wait = 10; 
   int i, j; 
   for (j=0; j < 384; j++)
     {
@@ -31,7 +33,7 @@ void loop()
         }  
     }
     strip.show();
-    delay(10);
+    delay(wait);
 }
 
 /*
