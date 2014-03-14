@@ -1,4 +1,4 @@
-#N canvas 1011 91 613 631 10;
+#N canvas 699 82 613 631 10;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
 #X msg -330 -206 close;
@@ -10,7 +10,7 @@
 -1 -1;
 #X obj -107 -210 send in;
 #X obj -221 -211 receive in;
-#N canvas 131 275 968 563 lights 1;
+#N canvas 67 287 968 563 lights 0;
 #N canvas 72 104 423 503 analog 0;
 #X obj 38 10 inlet;
 #X obj 131 10 inlet;
@@ -52,9 +52,9 @@
 #X connect 16 0 13 0;
 #X connect 17 0 14 0;
 #X restore 283 -86 pd analog;
-#X msg 283 -61 analog 3 1;
+#X msg 283 -61 analog 3 0;
 #X obj 334 -281 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 283 -38 send green;
 #X msg 253 -104 3;
 #N canvas 72 104 423 503 analog 0;
@@ -98,9 +98,9 @@
 #X connect 16 0 13 0;
 #X connect 17 0 14 0;
 #X restore 542 -93 pd analog;
-#X msg 542 -69 analog 6 1;
+#X msg 542 -69 analog 6 0.39;
 #X obj 593 -290 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -4160
--1 -1 12700 1;
+-1 -1 7620 1;
 #X msg 542 -115 6;
 #X obj 542 -45 send blue;
 #N canvas 72 104 423 503 analog 0;
@@ -144,9 +144,9 @@
 #X connect 16 0 13 0;
 #X connect 17 0 14 0;
 #X restore 69 -51 pd analog;
-#X msg 69 -26 analog 9 0.771654;
+#X msg 69 -26 analog 9 0.352913;
 #X obj 119 -257 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 9800 1;
+-1 -1 5976 1;
 #X msg 67 -77 9;
 #X obj 69 -2 send red;
 #X obj 535 -156 send bin;
@@ -195,13 +195,13 @@
 #X connect 4 0 0 3;
 #X restore 809 -60 pd colwin;
 #X obj 199 -339 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 2;
 #X obj 719 -413 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 2;
 #X text 218 -338 autolight;
 #X text 215 -325 reactive;
 #X obj 450 -368 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 2;
 #X obj 199 -369 receive option;
 #X obj 460 -395 receive option;
 #X obj 719 -441 receive option;
@@ -324,7 +324,7 @@
 #X obj 593 -321 mux 0 1 2 3 4;
 #X text 217 -310 leap;
 #X obj 845 -493 vradio 30 1 0 5 empty empty empty 0 -8 0 10 -232576
--1 -1 3;
+-1 -1 2;
 #X text 880 -482 autolight;
 #X text 875 -458 reactive;
 #X text 882 -399 drag;
@@ -340,7 +340,7 @@
 #X obj 862 -131 / 255;
 #X obj 909 -135 / 255;
 #X obj 118 -85 * 0.75;
-#X obj 601 -122 * 0.75;
+#X obj 601 -122 * 0.65;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 16 0;
